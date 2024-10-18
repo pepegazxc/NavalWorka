@@ -1,0 +1,191 @@
+USE [Stydiya Manikyra]
+GO
+/****** Object:  Table [dbo].[Clientu]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Clientu](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Number] [nchar](50) NULL,
+	[Name] [nchar](50) NULL,
+	[Gmail] [nchar](50) NULL,
+	[Histore of the visit] [nchar](50) NULL,
+	[Reviews] [nchar](50) NULL,
+ CONSTRAINT [PK_Clientu] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Dohod za mesyats]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Dohod za mesyats](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[income] [nchar](50) NULL,
+	[e] [nchar](10) NULL,
+	[r] [nchar](10) NULL,
+	[t] [nchar](10) NULL,
+	[y] [nchar](10) NULL,
+ CONSTRAINT [PK_Dohod za mesyats] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Rabotniki]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Rabotniki](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nchar](50) NULL,
+	[Number] [nchar](50) NULL,
+	[Adress] [nchar](50) NULL,
+	[Pasport] [nchar](50) NULL,
+	[Gmail] [nchar](50) NULL,
+ CONSTRAINT [PK_Rabotniki] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Seansi za mesyats]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Seansi za mesyats](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Sessions] [nchar](50) NULL,
+	[w] [nchar](10) NULL,
+	[e] [nchar](10) NULL,
+	[r] [nchar](10) NULL,
+	[t] [nchar](10) NULL,
+ CONSTRAINT [PK_Seansi za mesyats] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[StraFI]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StraFI](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nchar](50) NULL,
+	[Fines] [nchar](50) NULL,
+	[w] [nchar](10) NULL,
+	[e] [nchar](10) NULL,
+	[r] [nchar](10) NULL,
+ CONSTRAINT [PK_StraFI] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Trati za god]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Trati za god](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nchar](50) NULL,
+	[Salary] [nchar](50) NULL,
+	[Fines] [nchar](50) NULL,
+	[Purchase] [nchar](50) NULL,
+	[Month] [nchar](50) NULL,
+ CONSTRAINT [PK_Trati za god] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Yslygi]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Yslygi](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Services] [nchar](50) NULL,
+	[Price] [nchar](50) NULL,
+	[e] [nchar](10) NULL,
+	[r] [nchar](10) NULL,
+	[t] [nchar](10) NULL,
+ CONSTRAINT [PK_Yslygi] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[ZP]    Script Date: 18.10.2024 13:28:05 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[ZP](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nchar](50) NULL,
+	[Salary] [nchar](50) NULL,
+	[q] [nchar](10) NULL,
+	[w] [nchar](10) NULL,
+	[e] [nchar](10) NULL,
+ CONSTRAINT [PK_ZP] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Dohod za mesyats]  WITH CHECK ADD  CONSTRAINT [FK_Dohod za mesyats_Seansi za mesyats] FOREIGN KEY([id])
+REFERENCES [dbo].[Seansi za mesyats] ([id])
+GO
+ALTER TABLE [dbo].[Dohod za mesyats] CHECK CONSTRAINT [FK_Dohod za mesyats_Seansi za mesyats]
+GO
+ALTER TABLE [dbo].[Dohod za mesyats]  WITH CHECK ADD  CONSTRAINT [FK_Dohod za mesyats_StraFI] FOREIGN KEY([id])
+REFERENCES [dbo].[StraFI] ([id])
+GO
+ALTER TABLE [dbo].[Dohod za mesyats] CHECK CONSTRAINT [FK_Dohod za mesyats_StraFI]
+GO
+ALTER TABLE [dbo].[Dohod za mesyats]  WITH CHECK ADD  CONSTRAINT [FK_Dohod za mesyats_ZP] FOREIGN KEY([id])
+REFERENCES [dbo].[ZP] ([id])
+GO
+ALTER TABLE [dbo].[Dohod za mesyats] CHECK CONSTRAINT [FK_Dohod za mesyats_ZP]
+GO
+ALTER TABLE [dbo].[Rabotniki]  WITH CHECK ADD  CONSTRAINT [FK_Rabotniki_StraFI] FOREIGN KEY([id])
+REFERENCES [dbo].[StraFI] ([id])
+GO
+ALTER TABLE [dbo].[Rabotniki] CHECK CONSTRAINT [FK_Rabotniki_StraFI]
+GO
+ALTER TABLE [dbo].[Rabotniki]  WITH CHECK ADD  CONSTRAINT [FK_Rabotniki_ZP] FOREIGN KEY([id])
+REFERENCES [dbo].[ZP] ([id])
+GO
+ALTER TABLE [dbo].[Rabotniki] CHECK CONSTRAINT [FK_Rabotniki_ZP]
+GO
+ALTER TABLE [dbo].[Seansi za mesyats]  WITH CHECK ADD  CONSTRAINT [FK_Seansi za mesyats_Yslygi] FOREIGN KEY([id])
+REFERENCES [dbo].[Yslygi] ([id])
+GO
+ALTER TABLE [dbo].[Seansi za mesyats] CHECK CONSTRAINT [FK_Seansi za mesyats_Yslygi]
+GO
+ALTER TABLE [dbo].[StraFI]  WITH CHECK ADD  CONSTRAINT [FK_StraFI_Trati za god] FOREIGN KEY([id])
+REFERENCES [dbo].[Trati za god] ([id])
+GO
+ALTER TABLE [dbo].[StraFI] CHECK CONSTRAINT [FK_StraFI_Trati za god]
+GO
+ALTER TABLE [dbo].[ZP]  WITH CHECK ADD  CONSTRAINT [FK_ZP_StraFI] FOREIGN KEY([id])
+REFERENCES [dbo].[StraFI] ([id])
+GO
+ALTER TABLE [dbo].[ZP] CHECK CONSTRAINT [FK_ZP_StraFI]
+GO
+ALTER TABLE [dbo].[ZP]  WITH CHECK ADD  CONSTRAINT [FK_ZP_Trati za god] FOREIGN KEY([id])
+REFERENCES [dbo].[Trati za god] ([id])
+GO
+ALTER TABLE [dbo].[ZP] CHECK CONSTRAINT [FK_ZP_Trati za god]
+GO
